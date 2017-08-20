@@ -5,6 +5,8 @@ import numpy as np
 import math
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+
+# 最小二乘法
 from scipy.optimize import leastsq
 
 
@@ -16,6 +18,7 @@ def residual(theta, x1, y1):
 
 
 if __name__ == "__main__":
+    # 均值为2，标准差为3
     data = np.random.randn(1000) * 3 + 2
     y, x = np.histogram(data, bins=20, density=True)
     x = (x[1:] + x[:-1]) / 2

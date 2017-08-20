@@ -48,8 +48,34 @@ if __name__ == "__main__":
     #  [30 31 32 33 34 35]
     #  [40 41 42 43 44 45]
     #  [50 51 52 53 54 55]]
-    a = np.arange(0, 60, 10).reshape((-1, 1)) + np.arange(6)
-    print(a)
+
+    # print("打印一个二维数组")
+    # z = np.array([[1, 2, 3, 4],
+    #               [5, 6, 7, 8],
+    #               [9, 10, 11, 12],
+    #               [13, 14, 15, 16]])
+    # print(type(z))
+    # # 2行8列
+    # print(z.reshape(2,8))
+    # # 8行2列
+    # print(z.reshape(8,2))
+    # print("----------------------------")
+    # print(z.reshape(-1))
+    # print("----------------------------")
+    # print(z.reshape(-1,1))
+    # print("----------------------------")
+    # # temp_a=np.arrange(0,60,10).reshape(-1)
+    # temp_a=np.arange(0, 60, 10).reshape((-1, 1))
+    # print(temp_a)
+    # print("----------------------------")
+    # a = np.arange(0, 60, 10).reshape((-1, 1))
+    # b= np.arange(6)
+    # print(a)
+    # print("----------------------------")
+    # print(b)
+    # print("----------------------------")
+    # print(a+b)
+    # print("----------------------------")
 
     # 正式开始  -:)
     # 标准Python的列表(list)中，元素本质是对象。
@@ -63,17 +89,21 @@ if __name__ == "__main__":
     # a = np.array(L)
     # print("a = ", a)
     # print(type(a), type(L))
-    # # 若传递的是多层嵌套的list，将创建多维数组
+    # # # # 若传递的是多层嵌套的list，将创建多维数组
     # b = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
     # print(b)
-    #
-    # # # # # 数组大小可以通过其shape属性获得
+    # #
+    # # # # # # 数组大小可以通过其shape属性获得
     # print(a.shape)
     # print(b.shape)
-    #
+    # #
+    # print("----------------------------")
     # # # 也可以强制修改shape
     # b.shape = 4, 3
+    # c=b
+    # c.shape=4,3
     # print(b)
+    # print(c)
     # # 注：从(3,4)改为(4,3)并不是对数组进行转置，而只是改变每个轴的大小，数组元素在内存中的位置并没有改变
     #
     # # # 当某个轴为-1时，将根据数组元素的个数自动计算此轴的长度
@@ -118,12 +148,12 @@ if __name__ == "__main__":
     # np.set_printoptions(linewidth=100, suppress=True)
     # a = np.arange(1, 10, 0.5)
     # print(a)
-    #
-    # # # # linspace函数通过指定起始值、终止值和元素个数来创建数组，缺省包括终止值
+    # #
+    # # # # # linspace函数通过指定起始值、终止值和元素个数来创建数组，缺省包括终止值
     # b = np.linspace(1, 10, 10)
     # print('b = ', b)
-    #
-    # # 可以通过endpoint关键字指定是否包括终值
+    # #
+    # # # 可以通过endpoint关键字指定是否包括终值
     # c = np.linspace(1, 10, 10, endpoint=False)
     # print('c = ', c)
     #
@@ -250,8 +280,8 @@ if __name__ == "__main__":
     # print('二维数组：\n', c)
     # print('去重后：', np.unique(c))
     # # # 4.2.3 方案1：转换为虚数
-    r, i = np.split(c, (1, ), axis=1)
-    x = r + i * 1j
+    # r, i = np.split(c, (1, ), axis=1)
+    # x = r + i * 1j
     # x = c[:, 0] + c[:, 1] * 1j
     # print('转换成虚数：', x)
     # print('虚数去重后：', np.unique(x))
